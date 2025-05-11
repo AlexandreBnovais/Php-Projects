@@ -2,17 +2,17 @@
 $estudantes = [ 
     "pedro" => [
         "Email" => "pedroguerra20@gmail.com",
-        "RM" => "2020",
+        "RM" => "20202930152",
         "notas" => [10, 10, 10]
     ],
     "joao" => [
         "Email" => "joaoguerra20@gmail.com",
-        "RM" => "2020",
+        "RM" => "20202930169",
         "notas" => [8, 1, 2]
     ],
     "maria" => [
         "Email" => "mariaguerra20@gmail.com",
-        "RM" => "2020", 
+        "RM" => "20202930125", 
         "notas" => [0, 7, 5]
     ]
 ];
