@@ -19,8 +19,8 @@ $estudantes = [
 
 foreach($estudantes as $key => $aluno) {
     echo "Aluno: $key\n";
-    echo "Email " . $aluno['Email'] . "\n";
-    echo "RM " . $aluno['RM'] . "\n";
+    echo "Email: " . $aluno['Email'] . "\n";
+    echo "RM: " . $aluno['RM'] . "\n";
 
     foreach($aluno['notas'] as $media) {
         echo "Notas: $media\t";
