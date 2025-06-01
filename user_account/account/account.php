@@ -1,6 +1,15 @@
 <?php 
-    if(session_status() !== PHP_SESSION_ACTIVE) {
+    if(session_status() !== PHP_SESSION_ACTIVE) 
+    {
         session_start();
+    }
+    
+    if(isset($_POST['logoutID'])) 
+    {
+        session_unset();
+        session_destroy();
+
+        header('Location: ../login/login.php');
     }
 ?>
 
@@ -15,19 +24,20 @@
 <body>
     
     <main>
-        <div>
+        <div class="tougle-left">
             <img src="../assets/olena-bohovyk.jpg" alt="olena-bohovyk.jpg">
         </div>
-        <ul>
+        <div class="tougle-right">
             <h1>Informações da conta</h1>
             <li><strong>Nome: </strong> <?php echo $_SESSION['user']?></li>
             <li><strong>Endereço: </strong><?php echo $_SESSION['adress']?></li>
             <li><strong>Bairro: </strong><?php echo $_SESSION['neighborhood']?></li>
             <li><strong>Telefone: </strong><?php echo $_SESSION['phone']?></li>
             <li><strong>Email: </strong><?php echo $_SESSION['email']?></li>
-            <li><strong>Senha: </strong><?php echo $_SESSION['password']?></li>
-        </ul>
-            
+            <form action="./account.php" method="post">
+                <button name="logoutID" type="submit">Logout</button>
+            </form>
+        </div>     
     </main>
 </body>
 </html>
