@@ -35,4 +35,10 @@ input {
     background-color: #000;
     color: #fff;
     font-weight: 500;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #302f2f;
+    transition: all 0.3s ease-in;
+    transform: translateY(-5px);
 }
