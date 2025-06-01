@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style4.css">
 </head>
 <body>
     <form action="./bank_account.php" method="post">
         Digite um valor: <br>
         <input type="number" name="balance"><br>
-        <input type="submit" name="depositar" value="Depositar">
-        <input type="submit" name="saque" value="Sacar">
-        <input type="submit" name="saldo" value="Saldo" >
-        <input type="submit" name="limpar" value="Limpar">
+        <input type="submit" name="depositar" value="Depositar" class="button">
+        <input type="submit" name="saque" value="Sacar" class="button">
+        <input type="submit" name="saldo" value="Saldo"  class="button">
+        <input type="submit" name="limpar" value="Limpar" class="button">
     </form>
 </body>
 </html>
@@ -39,7 +40,7 @@
             if($dep > 0) {
                 $_SESSION['saldo'] = $this->saldo;
                 $_SESSION['saldo'] += $dep;
-                echo "Deposito no valor de R$ " . number_format($dep, 2, ',','.') . " foi efetuado com sucesso";
+                echo "<h1>Deposito no valor de R$ " . number_format($dep, 2, ',','.') . " foi efetuado com sucesso</h1>";
             }else{
                 echo "valor do deposito insulficiente";
             }
@@ -49,17 +50,17 @@
         {
             if($saq > 0 && $saq <= $this->saldo) {
                 $_SESSION['saldo'] = $this->saldo;
-                $_SESSION['saldo'] += $saq;
-                echo "Deposito no valor de" . number_format($saq, 2, ',','.') . "foi efetuado com sucesso";
+                $_SESSION['saldo'] -= $saq;
+                echo "<h1>Saque no valor de R$ " . number_format($saq, 2, ',','.') . " foi efetuado com sucesso</h1>";
             }else {
-                echo "Valor de saque indisponivel";
+                echo "<h1>Valor de saque indisponivel</h1>";
             }
         }
 
         public function Saldo()
         {
             $_SESSION['saldo'] = $this->saldo;
-            echo "Saldo atual: R$ " . number_format($_SESSION['saldo'], 2, ',','.') . "<br>";
+            echo "<h1>Saldo atual: R$ </h1>" . number_format($_SESSION['saldo'], 2, ',','.') . "<br>";
         }
 
         public function Limpar() {
