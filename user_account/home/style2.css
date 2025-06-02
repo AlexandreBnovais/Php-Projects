@@ -38,23 +38,17 @@ main > h1 {
     
 }
 .internal-box > button {
+    border-radius: 20px;
     background-color: #000;
-    border-radius: 30px;
+    color: #fff;
+    font-weight: 500;
     cursor: pointer;
     width: 200px;
     padding: 10px;
-    transition: all 0.3s ease-in;
 }
-.internal-box > a,button:hover {
+.internal-box > button:hover {
     background-color: #302f2f;
     transition: all 0.3s ease-in;
-}
-.internal-box > button > a {
-    color: #fff;
-    text-decoration: none;
-    text-transform: capitalize;
-    font-size: 16px;
-    font-weight: 500;
 }
 
 

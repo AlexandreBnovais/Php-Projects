@@ -15,15 +15,15 @@ body {
     min-height: 100vh;
     max-width: 100%;
 }
-main {
+form {
     display: flex;
     flex-direction: row;
     align-items: center;
     max-width: 50%;
     border-radius: 20px;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.17);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.17);
 }
-main > div {
+div {
     flex: 1;
 }
 h1 {
@@ -32,7 +32,7 @@ h1 {
     font-weight: 500;
 }
 li {
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.17);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.17);
     margin-bottom: 15px;
     border-radius: 10px;
     font-size: 16px;
@@ -49,19 +49,31 @@ img {
     border-radius: 20px;
     object-fit: cover;
 }
-button {
-    background-color: #000;
+.tougle-right {
+    padding: 20px;
+}
+.logout-button {
     width: 100%;
     padding: 10px;
-    border-radius: 20px;
     color: #fff;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
+    border-radius: 20px;
+    background-color: #000;
 }
-button:hover {
+.logout-button:hover {
     background-color: #302f2f;
     transition: all 0.3s ease-in;
 }
-.tougle-right {
-    padding: 20px;
+.back-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    cursor: pointer;
+    margin-bottom: 20px;
 }

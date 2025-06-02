@@ -15,6 +15,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     max-width: 100%;
+    position: relative;
 }
 
 form {
@@ -41,4 +42,17 @@ input {
     background-color: #302f2f;
     transition: all 0.3s ease-in;
     transform: translateY(-5px);
+}
+
+.back-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    cursor: pointer;
+    margin-bottom: 20px;
 }

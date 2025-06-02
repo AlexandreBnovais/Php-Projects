@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+    
     <form action="./bank_account.php" method="post">
+        <button type="submit" name="back-button" class="back-button">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
         Digite um valor: <br>
         <input type="number" name="balance"><br>
         <input type="submit" name="depositar" value="Depositar" class="button">
@@ -83,5 +88,7 @@
     if(isset($_POST['limpar'])) {
         $action->Limpar();
     }
-
+    if(isset($_POST['back-button'])) {
+        header('Location: ../home/response.php');
+    }
 ?>

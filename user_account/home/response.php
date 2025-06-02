@@ -2,6 +2,12 @@
     if(session_status() !== PHP_SESSION_ACTIVE) {
         session_start();
     }
+    if(isset($_POST['conta'])) {
+        header('Location: ../bk_account/bank_account.php');
+    }
+    if(isset($_POST['painel'])) {
+        header('Location: ../account/account.php');
+    }
 ?>
 
 <!DOCTYPE html>
@@ -18,10 +24,10 @@
 
         <div class="external-box">
             <h3>Selecione uma opção</h3>
-            <div class="internal-box">
-                <button><a href="../bk_account/bank_account.php">Conta</a></button>
-                <button><a href="../account/account.php">painel de usuario</a></button>
-            </div>
+            <form action="response.php" method="post" class="internal-box">
+                <button type="submit" name="conta">Conta</button>
+                <button type="submit" name="painel">Painel do Usuario</button>
+            </form>
         </div>
     </main>
 </body>
