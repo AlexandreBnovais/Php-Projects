@@ -22,7 +22,7 @@
     <form action="./login.php" method="post">
         Usuario: <input type="text" name="userID" id="userID"><br>
         Senha: <input type="password" name="passwordID" id="passwordID"><br>
-        <input type="submit" name="btn" value="Continue">
+        <input type="submit" name="btn" class="btn" value="Continue">
     </form>
 </body>
 </html>
